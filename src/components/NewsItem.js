@@ -29,7 +29,7 @@ export default class news extends Component {
                         <p className="card-text text-light">{description}....</p>
                         <p class="card-text "><small class="text-white">By - {!author?"Unknown":author} on {new Date(date).toGMTString()}</small></p>
 
-                        <a href={url} target="_blank" className="btn btn-outline-light">Read More</a>
+                        <a href={url} rel="noopener" className="btn btn-outline-light">Read More</a>
                     </div>
             </div>
         </>

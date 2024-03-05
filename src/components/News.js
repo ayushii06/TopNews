@@ -25,7 +25,7 @@ capitalizeFirstLetter(string) {
 
 async updatearticles(){
   this.props.setProgress(10);
-  const url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=1&pageSize=${this.props.pageSize}&from=2024-01-29`;
+  const url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=1&pageSize=${this.props.pageSize}&from=2024-03-01&to=2024-03-04`;
     this.setState({loading:true});
     let data=await fetch(url);
     this.props.setProgress(30);
@@ -86,7 +86,7 @@ async componentDidMount(){
       }
     )
 
-    const url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=1&pageSize=${this.props.pageSize}&from=2024-01-29`;
+    const url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=1&pageSize=${this.props.pageSize}&from=2024-03-01&to=2024-03-04`;
     this.setState({loading:true});
     let data=await fetch(url);
     let parsedata=await data.json();
